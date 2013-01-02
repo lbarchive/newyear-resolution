@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>New Year's Resolution Generator</title>
+  <link rel="stylesheet" href="main.css" type="text/css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="murmurhash3_gc.js"></script>
+  <script src="resolutions.js"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    <h1>New Year's Resolution Generator</h1>
+  </header>
+
+  <section>
+    <div><span id='ugly-message'>
+      <a href='https://github.com/livibetter/newyear-resolution#why-does-this-look-so-ugly'>Why does this look so ugly?</a>
+    </span></div>
+    <div><span id="message"></span></div>
+  </section>
+
+  <article id="resolution">
+    <div>In <span id='year'>this year</span>, I will</div>
+    <div><a id="resolution-text" href="#"></a></div>
+    <footer>
+      <a id='resolution-share' href="http://as.yjl.im/">Share</a>
+    </footer>
+  </article>
+
+  <section id="controls">
+    <section id="categories"></section>
+    <div><button onclick="next()">Next</button></div>
+  </section>
+
+  <footer>
+    <div>
+      <span id='total-resolutions'></span> resolutions contributed by <span id='total-contributors'></span> contributors
+    </div>
+    <div>
+      Inspired by 
+      <a href="http://www.google.com/zeitgeist/2012/resolutions/">Google</a>
+      and
+      <a href="http://moninavelarde.com/newyears/">another generator</a>
+    </div>
+    <div>
+      Created by <a href="http://yjl.im">Yu-Jie Lin</a>
+      &bullet;
+      <a href="https://github.com/livibetter/newyear-resolution">GitHub</a>
+      &bullet;
+      <a href='http://as.yjl.im'>Share</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
