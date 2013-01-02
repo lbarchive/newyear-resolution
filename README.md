@@ -1,8 +1,9 @@
 New Year's Resolution Generator
 ===============================
 
-This project is inspired by [Google][] — where I stole the categories — and [another generator][another].
+**[New Year's Resolution Generator][website]** is inspired by [Google][] — where I stole the categories — and [another generator][another].
 
+[website]: http://livibetter.github.com//newyear-resolution
 [Google]: http://www.google.com/zeitgeist/2012/resolutions/
 [another]: http://moninavelarde.com/newyears/
 
