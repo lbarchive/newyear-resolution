@@ -1,3 +1,7 @@
+body {
+  margin: 0 0;
+}
+
 .wrapper {
   margin: 0 auto;
   width: 640px;
@@ -7,4 +11,8 @@ header, article, section, footer, footer > div,
 #resolution div.prefix, #resolution-text {
   margin: 10px 0;
   text-align: center;
+}
+
+#resbox {
+  margin: 10px 10px;
 }

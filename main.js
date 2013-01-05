@@ -1,11 +1,13 @@
 function message(text) {
   $('#message').text(text).show();
+  resize();
 }
 
 function show(text, hash) {
   location.hash = hash;
   $('#resolution-text').attr('href', location.href).text(text);
   $('#resolution-share').attr('href', 'http://as.yjl.im/#url=' + encodeURI(location.href));
+  resize();
 }
 
 function next() {
@@ -83,11 +85,15 @@ function init() {
   });
   $('#total-resolutions').text(total);
 
-  // Updating total contributions count
-  var API = 'https://api.github.com/repos/livibetter/newyear-resolution/contributors';
-  $.getJSON(API + '?callback=?', function (data) {
-    $('#total-contributors').text(data.data.length);
-  });
+  // Updating total contributions count when not on localhost
+  if (location.href.indexOf('localhost') == -1) {
+    var API = 'https://api.github.com/repos/livibetter/newyear-resolution/contributors';
+    $.getJSON(API + '?callback=?', function (data) {
+      $('#total-contributors').text(data.data.length);
+    });
+  }
+
+  $(window).resize(resize);
 
   // Has hash in URL?
   if (location.hash) {
@@ -105,6 +111,18 @@ function init() {
 
   // Show initial resolution
   next();
+}
+
+// resize #resolution-text to fill up the window
+function resize() {
+  var $w = $(window);
+  var $d = $(document);
+  var $h = $('html');
+  var $b = $('body');
+  var $t = $('#resbox');
+
+  var h = $w.height() - ($h.outerHeight() - $t.outerHeight());
+  $t.outerHeight(h);
 }
 
 $(init);
