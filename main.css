@@ -16,3 +16,12 @@ header, article, section, footer, footer > div,
 #resbox {
   margin: 10px 10px;
 }
+
+#resolution-text {
+  display: inline-block;
+  text-decoration: none;
+}
+
+#resolution-text:hover {
+  text-decoration: underline;
+}

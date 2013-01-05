@@ -116,13 +116,20 @@ function init() {
 // resize #resolution-text to fill up the window
 function resize() {
   var $w = $(window);
-  var $d = $(document);
   var $h = $('html');
-  var $b = $('body');
   var $t = $('#resbox');
 
   var h = $w.height() - ($h.outerHeight() - $t.outerHeight());
   $t.outerHeight(h);
+
+  // resize text and reposition
+  var $box = $('#resbox').textfill({
+    innerTag: 'a',
+    maxFontPixels: 0
+  });
+  $a = $box.children('a');
+  var margin = $box.innerHeight() - $a.outerHeight();
+  $a.css('margin-top', margin / 2);
 }
 
 $(init);
