@@ -3,10 +3,19 @@ function message(text) {
   resize();
 }
 
-function show(text, hash) {
+function show(category, idx) {
+  var text = category.resolutions[idx];
+  var hash = category.hashes[idx];
   location.hash = hash;
-  $('#resolution-text').attr('href', location.href).text(text);
+  $('#resolution-text')
+    .attr('href', location.href).text(text)
+    .css('color', category.color);
   $('#resolution-share').attr('href', 'http://as.yjl.im/#url=' + encodeURI(location.href));
+
+  var $dummy = $('<span/>').css('background-color', category.backgroundColor);
+  var c = $dummy.css('background-color').replace('rgb', 'rgba').replace(')', ', 0.5');
+  $('body').css('background-color', c);
+
   resize();
 }
 
@@ -39,7 +48,7 @@ function next() {
   });
 
   var idx = Math.floor(Math.random() * selected.count);
-  show(selected.resolutions[idx], selected.hashes[idx]);
+  show(selected, idx);
 }
 
 function find_by_hash(hash) {
@@ -66,12 +75,16 @@ function init() {
 
   // Generating category list
   $.each(resolutions, function (id, cat) {
-    var $box = $('<label id="label-' + id + '"><input id="cat-' + id + '" type="checkbox" class="category" checked="checked"/><span class="webicon">' + cat.webicon + '</span> <span>' + cat.title + '</span></label>');
+    var $box = $('<label id="label-' + id + '"><input id="cat-' + id + '" type="checkbox" class="category" checked="checked"/><span class="webicon">' + cat.webicon + '</span><span>' + cat.title + '</span></label>');
+
+    var $dummy = $('<span/>').css('background-color', cat.backgroundColor);
+    var c = $dummy.css('background-color').replace('rgb', 'rgba').replace(')', ', 0.5');
+
     $box.css('color', cat.color)
+        .css('backgroundColor', c)
         .css('font-weight', 'bold');
     $box
       .children('input')
-        .css('display', 'none')
         .change(function (evt) {
           $(this).parent().css('opacity', (this.checked) ? 1.0 : 0.25);
         });
@@ -101,7 +114,7 @@ function init() {
     var category = result[0];
     var idx = result[1];
     if (category) {
-      show(category.resolutions[idx], category.hashes[idx]);
+      show(category, idx);
     } else {
       next();
       message('Oh, no... Resolution Monster has eaten that resolution! But we have another one for you!');

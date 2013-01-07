@@ -1,5 +1,14 @@
 body {
   margin: 0 0;
+  font-family: sans;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .wrapper {
@@ -13,15 +22,28 @@ header, article, section, footer, footer > div,
   text-align: center;
 }
 
+#resolution div.prefix {
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
 #resbox {
   margin: 10px 10px;
 }
 
 #resolution-text {
   display: inline-block;
-  text-decoration: none;
+  text-transform: uppercase;
 }
 
-#resolution-text:hover {
-  text-decoration: underline;
+#categories label {
+  margin: 0.25ex;
+  padding: 0.5ex;
+  cursor: pointer;
+
+  border-radius: 0.5ex;
+}
+
+#categories label input {
+  display: none;
 }

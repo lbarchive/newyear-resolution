@@ -38,42 +38,50 @@ _resolutions.other = [
 var resolutions = {
   love: {
     title: 'Love',
-    color: 'red',
+    color: '#e00',
+    backgroundColor: 'pink',
     webicon: ''
   },
   health: {
     title: 'Health',
     color: 'green',
+    backgroundColor: 'lightgreen',
     webicon: ''
   },
   career: {
     title: 'Career',
     color: 'blue',
+    backgroundColor: 'lightblue',
     webicon: ''
   },
   finance: {
     title: 'Finance',
-    color: 'gold',
+    color: '#dd0',
+    backgroundColor: '#b33b00',
     webicon: ''
   },
   family: {
     title: 'Family',
     color: 'maroon',
+    backgroundColor: '#c60',
     webicon: ''
   },
   education: {
     title: 'Education',
     color: 'teal',
+    backgroundColor: '#0cc',
     webicon: ''
   },
   do_good: {
     title: 'Do Good',
     color: 'olive',
+    backgroundColor: '#cc0',
     webicon: ''
   },
   other: {
     title: 'Other',
-    color: 'navy',
+    color: '#000080',
+    backgroundColor: '#66d',
     webicon: ''
   }
 };
@@ -85,7 +93,7 @@ $.each(resolutions, function (id, cat) {
     return murmurhash3_32_gc(line.toUpperCase()).toString(16);
   });
   cat.resolutions = $.map(_resolutions[id], function (line, idx) {
-    return line.toUpperCase();
+    return line;
   });
   cat.count = _resolutions[id].length;
 });
