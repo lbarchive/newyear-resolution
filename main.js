@@ -82,7 +82,8 @@ function init() {
 
     $box.css('color', cat.color)
         .css('backgroundColor', c)
-        .css('font-weight', 'bold');
+        .css('font-weight', 'bold')
+        .attr('title', cat.resolutions.length + ' resolutions in ' + cat.title);
     $box
       .children('input')
         .change(function (evt) {
