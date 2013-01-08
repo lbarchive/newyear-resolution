@@ -22,6 +22,16 @@ header, article, section, footer, footer > div,
   text-align: center;
 }
 
+#message {
+  margin: 10px;
+  color: red;
+  background-color: pink;
+
+  border-radius: 0.5ex;
+
+  opacity: 0.75;
+}
+
 #resolution div.prefix {
   font-size: 2em;
   text-transform: uppercase;
