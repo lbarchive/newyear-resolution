@@ -27,17 +27,9 @@ Feel free to change anything.
 Submit your resolutions
 -----------------------
 
-To submit, simply
+You can submit in [3 ways][submit].
 
-0. fork this project
-0. go to your forked repository
-0. select `resolutions.js`
-0. click Edit to edit `resolutions.js`
-0. add your resolutions to appropriate categories
-0. commit the additions
-0. create a pull request
-
-Please note: When you create a pull request for me to pull in, you also agree that you put your content in public domain.
+[submit]: https://github.com/livibetter/newyear-resolution/issues/1
 
 Contributing the code
 ---------------------
