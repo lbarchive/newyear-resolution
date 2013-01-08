@@ -80,16 +80,19 @@ function init() {
     var $dummy = $('<span/>').css('background-color', cat.backgroundColor);
     var c = $dummy.css('background-color').replace('rgb', 'rgba').replace(')', ', 0.5');
 
-    $box.css('color', cat.color)
-        .css('backgroundColor', c)
-        .css('font-weight', 'bold')
-        .attr('title', cat.resolutions.length + ' resolutions in ' + cat.title);
     $box
+      .css({
+        'color': cat.color,
+        'backgroundColor': c,
+        'font-weight': 'bold'
+      })
+      .attr('title', cat.resolutions.length + ' resolutions in ' + cat.title)
       .children('input')
         .change(function (evt) {
           $(this).parent().css('opacity', (this.checked) ? 1.0 : 0.25);
-        });
-    $box.appendTo($('#categories'));
+        })
+      .end()
+      .appendTo($('#categories'));
   });
 
   // Updating total resolutions count
