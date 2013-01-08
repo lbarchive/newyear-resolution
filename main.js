@@ -135,12 +135,16 @@ function resize() {
   var h = $w.height() - ($h.outerHeight() - $t.outerHeight());
   $t.outerHeight(h);
 
+  var $box = $('#resbox');
+  var $a = $box.children('a');
+
+  $a.css('margin-top', 0);
   // resize text and reposition
-  var $box = $('#resbox').textfill({
+  $box.textfill({
     innerTag: 'a',
     maxFontPixels: 0
   });
-  $a = $box.children('a');
+
   var margin = $box.innerHeight() - $a.outerHeight();
   $a.css('margin-top', margin / 2);
 }
