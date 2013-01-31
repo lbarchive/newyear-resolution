@@ -6,6 +6,7 @@ _resolutions.love = [
 
 // health 
 _resolutions.health = [
+  "exercise thirty minutes every day"
 ];
 
 // career
@@ -22,15 +23,18 @@ _resolutions.family = [
 
 // education
 _resolutions.education = [
+  "read a book every week"
 ];
 
 // do good
 _resolutions.do_good = [
+  "contribute to open source projects every week"
 ];
 
 // other
 _resolutions.other = [
-  "improve New Year's Resolution Generator"
+  "improve New Year's Resolution Generator",
+  "start a Photo 365 project"
 ];
 
 // ========================================
