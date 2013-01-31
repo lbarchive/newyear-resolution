@@ -132,24 +132,24 @@ function init() {
 
 // resize #resolution-text to fill up the window
 function resize() {
-  var $w = $(window);
-  var $h = $('html');
   var $t = $('#resbox');
+  var $a = $t.children('a');
 
-  var h = $w.height() - ($h.outerHeight() - $t.outerHeight());
-  $t.outerHeight(h);
-
-  var $box = $('#resbox');
-  var $a = $box.children('a');
+  var h = $(window).height()
+        - $('.wrapper.top').height()
+        - $('.wrapper.bottom').height()
+        - $('.prefix').height();
+  $t.height(h);
+  $t.width($t.width());
 
   $a.css('margin-top', 0);
   // resize text and reposition
-  $box.textfill({
+  $t.textfill({
     innerTag: 'a',
     maxFontPixels: 0
   });
 
-  var margin = $box.innerHeight() - $a.outerHeight();
+  var margin = $t.innerHeight() - $a.outerHeight();
   $a.css('margin-top', margin / 2);
 }
 

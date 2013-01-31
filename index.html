@@ -11,7 +11,7 @@
   <script src="main.js"></script>
 </head>
 <body>
-<div class="wrapper">
+<div class="wrapper top">
   <header>
     <h1>New Year's Resolution Generator</h1>
   </header>
@@ -27,15 +27,12 @@
   <article id="resolution">
     <div class='prefix'>In <span id='year'>this year</span>, I will</div>
     <div id='resbox'><a id="resolution-text" href="#"></a></div>
-    <footer>
-      <a id='resolution-share' href="http://as.yjl.im/">Share</a>
-    </footer>
   </article>
 
-<div class='wrapper'>
+<div class='wrapper bottom'>
   <section id="controls">
+    <div><a id='resolution-share' href="http://as.yjl.im/">Share</a> <button onclick="next()">Next</button></div>
     <section id="categories"></section>
-    <div><button onclick="next()">Next</button></div>
   </section>
 
   <footer>

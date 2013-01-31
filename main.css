@@ -16,6 +16,13 @@ a:hover {
   width: 640px;
 }
 
+.wrapper.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
 header, article, section, footer, footer > div,
 #resolution div.prefix, #resolution-text {
   margin: 10px 0;
@@ -38,10 +45,11 @@ header, article, section, footer, footer > div,
 }
 
 #resbox {
-  margin: 10px 10px;
+  margin: 0 10px;
 }
 
 #resolution-text {
+  margin: 0;
   display: inline-block;
   text-transform: uppercase;
 }
