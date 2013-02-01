@@ -134,23 +134,17 @@ function init() {
 function resize() {
   var $t = $('#resbox');
   var $a = $t.children('a');
-
-  var h = $(window).height()
-        - $('.wrapper.top').height()
-        - $('.wrapper.bottom').height()
-        - $('.prefix').height();
+  var $p = $('.prefix')
+  var h = $('.wrapper.bottom').offset().top - $p.offset().top - $p.height();
   $t.height(h);
-  $t.width($t.width());
+  $t.width($(window).width() - 20);
 
   $a.css('margin-top', 0);
-  // resize text and reposition
   $t.textfill({
     innerTag: 'a',
     maxFontPixels: 0
   });
-
-  var margin = $t.innerHeight() - $a.outerHeight();
-  $a.css('margin-top', margin / 2);
+  $a.css('margin-top', (h - $a.outerHeight()) / 2);
 }
 
 $(init);
