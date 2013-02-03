@@ -63,6 +63,7 @@ header, article, section, footer, footer > div,
 #categories label {
   margin: 0.25ex;
   padding: 0.5ex;
+  display: inline-block;
   cursor: pointer;
 
   border-radius: 0.5ex;
