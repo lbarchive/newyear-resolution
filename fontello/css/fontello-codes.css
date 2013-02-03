@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+
+.icon-home:before { content: '\2302'; } /* '⌂' */
+.icon-heart:before { content: '\2665'; } /* '♥' */
+.icon-list:before { content: '\e005'; } /* '' */
+.icon-graduation-cap:before { content: '🎓'; } /* '\1f393' */
+.icon-thumbs-up:before { content: '👍'; } /* '\1f44d' */
+.icon-dollar:before { content: '💵'; } /* '\1f4b5' */
+.icon-briefcase:before { content: '💼'; } /* '\1f4bc' */
+.icon-chart-1:before { content: '\e80f'; } /* '' */

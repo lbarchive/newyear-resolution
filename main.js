@@ -75,8 +75,10 @@ function init() {
 
   // Generating category list
   $.each(resolutions, function (id, cat) {
-    var $box = $('<label id="label-' + id + '"><input id="cat-' + id + '" type="checkbox" class="category" checked="checked"/><span class="webicon">' + cat.webicon + '</span><span>' + cat.title + '</span></label>');
-
+    var $box = $('<label id="label-' + id + '"><input id="cat-' + id + '" type="checkbox" class="category" checked="checked"/><span>' + cat.title + '</span></label>');
+    if (cat.webicon != '') {
+      $box.children('span:last-child').addClass('icon-' + cat.webicon);
+    }
     var $dummy = $('<span/>').css('background-color', cat.backgroundColor);
     var c = $dummy.css('background-color').replace('rgb', 'rgba').replace(')', ', 0.5');
 

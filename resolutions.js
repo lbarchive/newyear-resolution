@@ -44,49 +44,49 @@ var resolutions = {
     title: 'Love',
     color: '#e00',
     backgroundColor: 'pink',
-    webicon: ''
+    webicon: 'heart'
   },
   health: {
     title: 'Health',
     color: 'green',
     backgroundColor: 'lightgreen',
-    webicon: ''
+    webicon: 'chart-1'
   },
   career: {
     title: 'Career',
     color: 'blue',
     backgroundColor: 'lightblue',
-    webicon: ''
+    webicon: 'briefcase'
   },
   finance: {
     title: 'Finance',
     color: '#dd0',
     backgroundColor: '#b33b00',
-    webicon: ''
+    webicon: 'dollar'
   },
   family: {
     title: 'Family',
     color: 'maroon',
     backgroundColor: '#c60',
-    webicon: ''
+    webicon: 'home'
   },
   education: {
     title: 'Education',
     color: 'teal',
     backgroundColor: '#0cc',
-    webicon: ''
+    webicon: 'graduation-cap'
   },
   do_good: {
     title: 'Do Good',
     color: 'olive',
     backgroundColor: '#cc0',
-    webicon: ''
+    webicon: 'thumbs-up'
   },
   other: {
     title: 'Other',
     color: '#000080',
     backgroundColor: '#66d',
-    webicon: ''
+    webicon: 'list'
   }
 };
 

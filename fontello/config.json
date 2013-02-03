@@ -1,0 +1,108 @@
+{
+  "name": "",
+  "glyphs": [
+    {
+      "search": [
+        "home"
+      ],
+      "code": 8962,
+      "uid": "513ac180ff85bd275f2b736720cbbf5e",
+      "css": "home",
+      "orig_css": "home",
+      "orig_code": 8962,
+      "src": "entypo",
+      "from": 8962
+    },
+    {
+      "search": [
+        "heart"
+      ],
+      "code": 9829,
+      "uid": "0eabe5f8d71cc838484ff39436426d2d",
+      "css": "heart",
+      "orig_css": "heart",
+      "orig_code": 9829,
+      "src": "entypo",
+      "from": 9829
+    },
+    {
+      "search": [
+        "list"
+      ],
+      "code": 57349,
+      "uid": "3626b3f3a0b284e7f4166b815719aece",
+      "css": "list",
+      "orig_css": "list",
+      "orig_code": 57349,
+      "src": "entypo",
+      "from": 57349
+    },
+    {
+      "search": [
+        "graduation"
+      ],
+      "code": 127891,
+      "uid": "ef74ff62feda486fd414410e782b598a",
+      "css": "graduation-cap",
+      "orig_css": "graduation-cap",
+      "orig_code": 127891,
+      "src": "entypo",
+      "from": 127891
+    },
+    {
+      "search": [
+        "thumbs",
+        "up",
+        "like",
+        "love",
+        "vote"
+      ],
+      "code": 128077,
+      "uid": "7ad4d2306ebda8452e5e3eff3cd8241c",
+      "css": "thumbs-up",
+      "orig_css": "thumbs-up",
+      "orig_code": 128077,
+      "src": "entypo",
+      "from": 128077
+    },
+    {
+      "search": [
+        "money",
+        "dollar"
+      ],
+      "code": 128181,
+      "from": 128181,
+      "uid": "fhpup8jff2yw9kmuwavhyqxogczcbbhj",
+      "css": "dollar",
+      "orig_css": "dollar",
+      "orig_code": 128181,
+      "src": "modernpics"
+    },
+    {
+      "search": [
+        "briefcase"
+      ],
+      "code": 128188,
+      "uid": "9ea7cce5e08e5ac2c225fabf2e6dc353",
+      "css": "briefcase",
+      "orig_css": "briefcase",
+      "orig_code": 128188,
+      "src": "entypo",
+      "from": 128188
+    },
+    {
+      "search": [
+        "chart",
+        "pie",
+        "diagram"
+      ],
+      "code": 59407,
+      "from": 128200,
+      "uid": "97ylvmgyj79w96iwzdanwmf5o4cvo17w",
+      "css": "chart-1",
+      "orig_css": "chart",
+      "orig_code": 59407,
+      "src": "modernpics"
+    }
+  ]
+}

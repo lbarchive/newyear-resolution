@@ -1,7 +1,10 @@
 body {
-  overflow: hidden;
   margin: 0 0;
-  font-family: sans;
+  overflow: hidden;
+  font-family: 'Open Sans', sans;
+
+  transition-property: background-color, color;
+  transition-duration: 0.25s, 0.25s;
 }
 
 a {
@@ -63,6 +66,9 @@ header, article, section, footer, footer > div,
   cursor: pointer;
 
   border-radius: 0.5ex;
+
+  transition-property: opacity;
+  transition-duration: 0.1s;
 }
 
 #categories label input {
