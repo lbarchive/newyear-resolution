@@ -74,27 +74,31 @@ function init() {
   $('#year').text(year);
 
   // Generating category list
+  function _cat_change(evt) {
+    $(this).parent().css('opacity', (this.checked) ? 1.0 : 0.25);
+  }
+  var $categories = $('#categories');
   $.each(resolutions, function (id, cat) {
-    var $box = $('<label id="label-' + id + '"><input id="cat-' + id + '" type="checkbox" class="category" checked="checked"/><span>' + cat.title + '</span></label>');
-    if (cat.webicon != '') {
-      $box.children('span:last-child').addClass('icon-' + cat.webicon);
-    }
     var $dummy = $('<span/>').css('background-color', cat.backgroundColor);
     var c = $dummy.css('background-color').replace('rgb', 'rgba').replace(')', ', 0.5');
 
-    $box
-      .css({
-        'color': cat.color,
-        'backgroundColor': c,
-        'font-weight': 'bold'
+    var $box = $('<label/>', {
+        id: 'label-' + id,
+        title: cat.resolutions.length + ' resolutions in ' + cat.title,
+        css: {color: cat.color, backgroundColor: c, fontWeight: 'bold'}
       })
-      .attr('title', cat.resolutions.length + ' resolutions in ' + cat.title)
-      .children('input')
-        .change(function (evt) {
-          $(this).parent().css('opacity', (this.checked) ? 1.0 : 0.25);
-        })
-      .end()
-      .appendTo($('#categories'));
+      .append($('<input/>', {
+        id : 'cat-' + id,
+        type: 'checkbox',
+        class: 'category',
+        checked: true,
+        change: _cat_change
+      }))
+      .append($('<span/>', {
+        text: cat.title,
+        class: cat.webicon && 'icon-' + cat.webicon
+      }))
+      .appendTo($categories);
   });
 
   // Updating total resolutions count
