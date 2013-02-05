@@ -75,3 +75,7 @@ header, article, section, footer, footer > div,
 #categories label input {
   display: none;
 }
+
+.hint:after {
+  border-radius: 0.5ex;
+}

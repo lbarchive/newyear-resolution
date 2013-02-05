@@ -13,7 +13,7 @@ function show(category, idx) {
   $('#resolution-share').attr('href', 'http://as.yjl.im/#url=' + encodeURI(location.href));
 
   var $dummy = $('<span/>').css('background-color', category.backgroundColor);
-  var c = $dummy.css('background-color').replace('rgb', 'rgba').replace(')', ', 0.5');
+  var c = $dummy.css('background-color').replace('rgb', 'rgba').replace(')', ', 0.5)');
   $('body').css('background-color', c);
 
   resize();
@@ -78,13 +78,15 @@ function init() {
     $(this).parent().css('opacity', (this.checked) ? 1.0 : 0.25);
   }
   var $categories = $('#categories');
+  var cats_hint_styles = '';
   $.each(resolutions, function (id, cat) {
     var $dummy = $('<span/>').css('background-color', cat.backgroundColor);
-    var c = $dummy.css('background-color').replace('rgb', 'rgba').replace(')', ', 0.5');
-
+    var c = $dummy.css('background-color').replace('rgb', 'rgba').replace(')', ', 0.5)');
+    var title = cat.resolutions.length + ' resolutions';
     var $box = $('<label/>', {
         id: 'label-' + id,
-        title: cat.resolutions.length + ' resolutions in ' + cat.title,
+        class: 'hint hint--top',
+        'data-hint': title,
         css: {color: cat.color, backgroundColor: c, fontWeight: 'bold'}
       })
       .append($('<input/>', {
@@ -99,20 +101,28 @@ function init() {
         class: cat.webicon && 'icon-' + cat.webicon
       }))
       .appendTo($categories);
+    cats_hint_styles += '#label-' + id + ':after{' +
+      'background:' + c + ';' +
+      'color:' + cat.color + ';' +
+      'text-shadow:' + '1px 1px 0 ' + c + ';' +
+    '}\n';
   });
+  $('<style/>').appendTo($('head')).text(cats_hint_styles);
 
   // Updating total resolutions count
   var total = 0;
   $.each(resolutions, function (id, cat) {
     total += cat.count;
   });
-  $('#total-resolutions').text(total);
+  $('#total-resolutions').text(total + ' Resolutions');
 
   // Updating total contributions count when not on localhost
   if (location.href.indexOf('localhost') == -1) {
     var API = 'https://api.github.com/repos/livibetter/newyear-resolution/contributors';
     $.getJSON(API + '?callback=?', function (data) {
-      $('#total-contributors').text(data.data.length);
+      $('#total-resolutions')
+        .addClass('hint hint--top hint--success')
+        .attr('data-hint', 'from ' + data.data.length + ' people');
     });
   }
 
