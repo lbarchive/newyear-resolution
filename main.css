@@ -15,6 +15,25 @@ a:hover {
   text-decoration: underline;
 }
 
+.button {
+  padding: 0.25ex 0.5ex;
+  border: 2px solid #aaa;
+  display: inline-block;
+  background-color: #ddd;
+  color: #222;
+  cursor: pointer;
+
+  border-radius: 0.5ex;
+}
+
+.button:hover {
+  background-color: #eee;
+}
+
+.button:active {
+  background-color: #fff;
+}
+
 .wrapper {
   margin: 0 auto;
   width: 640px;

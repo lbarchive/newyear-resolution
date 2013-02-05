@@ -10,7 +10,7 @@ function show(category, idx) {
   $('#resolution-text')
     .attr('href', location.href).text(text)
     .css('color', category.color);
-  $('#resolution-share').attr('href', 'http://as.yjl.im/#url=' + encodeURI(location.href));
+  $('#resolution-share').attr('data-href', 'http://as.yjl.im/#url=' + encodeURI(location.href));
 
   var $dummy = $('<span/>').css('background-color', category.backgroundColor);
   var c = $dummy.css('background-color').replace('rgb', 'rgba').replace(')', ', 0.5)');
@@ -128,6 +128,11 @@ function init() {
 
   $(window).resize(resize);
 
+  $('#resolution-share').click(function () {
+    window.open($(this).attr('data-href'));
+  });
+  $('#next-button').click(next);
+
   // Has hash in URL?
   if (location.hash) {
     var result = find_by_hash(location.hash);
@@ -135,11 +140,10 @@ function init() {
     var idx = result[1];
     if (category) {
       show(category, idx);
+      return;
     } else {
-      next();
       message('Oh, no... Resolution Monster has eaten that resolution! But we have another one for you!');
     }
-    return;
   }
 
   // Show initial resolution

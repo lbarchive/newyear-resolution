@@ -3,7 +3,9 @@
 
 .icon-home:before { content: '\2302'; } /* '⌂' */
 .icon-heart:before { content: '\2665'; } /* '♥' */
+.icon-right:before { content: '\27a1'; } /* '➡' */
 .icon-list:before { content: '\e005'; } /* '' */
+.icon-share:before { content: '\e73c'; } /* '' */
 .icon-graduation-cap:before { content: '🎓'; } /* '\1f393' */
 .icon-thumbs-up:before { content: '👍'; } /* '\1f44d' */
 .icon-dollar:before { content: '💵'; } /* '\1f4b5' */

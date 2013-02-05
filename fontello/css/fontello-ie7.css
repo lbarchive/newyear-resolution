@@ -11,7 +11,9 @@
 
 .icon-home { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2302;&nbsp;'); }
 .icon-heart { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2665;&nbsp;'); }
+.icon-right { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x27a1;&nbsp;'); }
 .icon-list { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe005;&nbsp;'); }
+.icon-share { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe73c;&nbsp;'); }
 .icon-graduation-cap { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f393;&nbsp;'); }
 .icon-thumbs-up { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f44d;&nbsp;'); }
 .icon-dollar { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f4b5;&nbsp;'); }

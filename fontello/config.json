@@ -27,6 +27,19 @@
     },
     {
       "search": [
+        "arrow",
+        "right"
+      ],
+      "code": 10145,
+      "uid": "9e67bfab0143d9511f8eef6897caeb88",
+      "css": "right",
+      "orig_css": "right",
+      "orig_code": 10145,
+      "src": "entypo",
+      "from": 10145
+    },
+    {
+      "search": [
         "list"
       ],
       "code": 57349,
@@ -36,6 +49,18 @@
       "orig_code": 57349,
       "src": "entypo",
       "from": 57349
+    },
+    {
+      "search": [
+        "share"
+      ],
+      "code": 59196,
+      "uid": "91426c82d94428a33353e495418435e3",
+      "css": "share",
+      "orig_css": "share",
+      "orig_code": 59196,
+      "src": "entypo",
+      "from": 59196
     },
     {
       "search": [
