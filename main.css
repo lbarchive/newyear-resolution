@@ -47,6 +47,7 @@ a:hover {
 }
 
 header, article, section, footer, footer > div,
+h1,
 #resolution div.prefix, #resolution-text {
   margin: 10px 0;
   text-align: center;
@@ -63,8 +64,6 @@ header, article, section, footer, footer > div,
 }
 
 #resolution div.prefix {
-  margin: 0;
-  padding: 10px 0;
   font-size: 2em;
   text-transform: uppercase;
 }
