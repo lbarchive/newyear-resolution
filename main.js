@@ -85,7 +85,7 @@ function init() {
     var title = cat.resolutions.length + ' resolutions';
     var $box = $('<label/>', {
         id: 'label-' + id,
-        class: 'hint hint--top',
+        class: 'hint hint--top hint--rounded',
         'data-hint': title,
         css: {color: cat.color, backgroundColor: c, fontWeight: 'bold'}
       })
@@ -121,7 +121,7 @@ function init() {
     var API = 'https://api.github.com/repos/livibetter/newyear-resolution/contributors';
     $.getJSON(API + '?callback=?', function (data) {
       $('#total-resolutions')
-        .addClass('hint hint--top hint--success')
+        .addClass('hint hint--top hint--success hint--rounded')
         .attr('data-hint', 'from ' + data.data.length + ' people');
     });
   }
